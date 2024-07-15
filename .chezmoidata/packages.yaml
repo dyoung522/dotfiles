@@ -1,6 +1,7 @@
 packages:
   darwin:
     brews:
+      - gh
       - git
       - gpg
       - zsh
@@ -11,10 +12,4 @@ packages:
       - zsh-navigation-tools
       - zsh-git-prompt
     casks:
-      - 1password
       - 1password-cli
-      - alfred
-      - appcleaner
-      - bartender
-      - visual-studio-code
-      - warp
