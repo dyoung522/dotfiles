@@ -1,0 +1,20 @@
+packages:
+  darwin:
+    brews:
+      - git
+      - gpg
+      - zsh
+      - zsh-completions
+      - zsh-syntax-highlighting
+      - zsh-autosuggestions
+      - zsh-history-substring-search
+      - zsh-navigation-tools
+      - zsh-git-prompt
+    casks:
+      - 1password
+      - 1password-cli
+      - alfred
+      - appcleaner
+      - bartender
+      - visual-studio-code
+      - warp
