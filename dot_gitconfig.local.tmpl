@@ -1,5 +1,7 @@
+{{ if eq .chezmoi.os "darwin" -}}
 [credential]
 	helper = osxkeychain
+{{ end -}}
 [credential "https://github.com"]
 	helper = !op plugin run -- gh auth git-credential
 [credential "https://gist.github.com"]
@@ -9,3 +11,4 @@
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
 	trustExitCode = true
+
