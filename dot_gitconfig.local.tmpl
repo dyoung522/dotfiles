@@ -3,13 +3,14 @@
 [user]
 	name = Donovan Young
 	email = dyoung522@gmail.com
-	signingKey = 9D2399131AA0B0024A4EB3705C61EE720CB998E8
+{{ if eq .chezmoi.os "darwin" -}}
 [credential]
 	helper = osxkeychain
 [credential "https://github.com"]
 	helper = !op plugin run -- gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !op plugin run -- gh auth git-credential
+{{ end -}}
 [alias]
   aa = add --all
   ap = add --patch
@@ -35,7 +36,6 @@
 	branch = auto
 	ui = auto
 [core]
-	excludesfile = /Users/dyoung/.gitignore
 	editor = vim
 	autocrlf = input
 [apply]
