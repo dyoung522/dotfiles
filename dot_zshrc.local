@@ -1,0 +1,24 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/libpq/bin:$PATH
+
+# rbenv setup
+if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
+
+# pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if which pyenv >/dev/null; then eval "$(pyenv init --path)"; fi
+
+# FZF setup
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# NVM setup
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if [ -d "~/.console-ninja" ]; then
+  export PATH=~/.console-ninja/.bin:$PATH
+fi
