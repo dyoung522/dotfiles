@@ -13,3 +13,8 @@ packages:
       - zsh-git-prompt
     casks:
       - 1password-cli
+  linux:
+    apps:
+      - nala
+      - gh
+      - xz-utils
