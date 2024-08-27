@@ -74,6 +74,9 @@ plugins=(
   1password
   dotenv
   git
+  golang
+  rails
+  ruby
 )
 
 source $ZSH/oh-my-zsh.sh
