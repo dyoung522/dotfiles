@@ -14,8 +14,3 @@ alias be="bundle exec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
-
-# Include custom aliases
-if [ -f ~/.aliases.local ]; then
-  source ~/.aliases.local
-fi
