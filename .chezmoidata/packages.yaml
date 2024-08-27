@@ -4,6 +4,7 @@ packages:
       - gh
       - git
       - gpg
+      - pyenv
       - zsh
       - zsh-completions
       - zsh-syntax-highlighting
@@ -13,6 +14,7 @@ packages:
       - zsh-git-prompt
     casks:
       - 1password-cli
+      - docker
   linux:
     apps:
       - nala
