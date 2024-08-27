@@ -14,3 +14,6 @@ alias be="bundle exec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# custom aliases
+alias gcssh-pd='gcloud compute ssh --zone "us-central1-a" "dyoung522@project-daedalus"  --project "projectdaedalus-fb09f"'
