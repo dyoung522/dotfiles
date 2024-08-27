@@ -1,11 +1,17 @@
 packages:
   darwin:
     brews:
+      - bat
+      - delta
+      - eza
+      - fd
       - fzf
       - gh
       - git
       - gpg
       - pyenv
+      - thefuck
+      - tlrc
       - zoxide
       - zsh
       - zsh-completions
@@ -19,8 +25,15 @@ packages:
       - docker
   linux:
     apps:
-      - nala
+      - bat
+      - delta
+      - eza
+      - fd
       - fzf
-      - gh
-      - xz-utils
+      - thefuck
+      - tlrc
       - zoxide
+      - gh
+      - nala
+      - xz-utils
+
