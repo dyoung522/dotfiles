@@ -4,12 +4,12 @@
 [user]
 	name = Donovan Young
 	email = dyoung522@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	autocrlf = input
 [hub]
 	protocol = https
-[push]
-	default = current
-[color]
-	ui = auto
 [alias]
 	aa = add --all
 	ap = add --patch
@@ -34,14 +34,15 @@
 	status = auto
 	branch = auto
 	ui = auto
-[core]
-	editor = vim
-	excludesfile = ~/.gitignore
-	autocrlf = input
+[pull]
+	rebase = true
+[push]
+	default = current
 [merge]
 	ff = only
 [commit]
 	template = ~/.gitmessage
+	gpgSign = false
 [fetch]
 	prune = true
 [rebase]
@@ -59,19 +60,11 @@
 	smudge = git-media-smudge %f
 [mergetool]
 	keepBackup = false
-[pull]
-	rebase = true
-[push]
-	default = simple
 [rerere]
 	enabled = true
-[init]
-	defaultBranch = main
 [gpg]
 	program = gpg
-[commit]
-	gpgSign = false
 [tag]
 	forceSignAnnotated = false
-[credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+[include]
+	path = ~/.gitconfig.local
