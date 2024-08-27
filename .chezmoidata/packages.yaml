@@ -1,10 +1,12 @@
 packages:
   darwin:
     brews:
+      - fzf
       - gh
       - git
       - gpg
       - pyenv
+      - zoxide
       - zsh
       - zsh-completions
       - zsh-syntax-highlighting
@@ -18,5 +20,7 @@ packages:
   linux:
     apps:
       - nala
+      - fzf
       - gh
       - xz-utils
+      - zoxide
