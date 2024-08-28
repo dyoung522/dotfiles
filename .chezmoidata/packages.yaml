@@ -10,7 +10,6 @@ packages:
       - git
       - gpg
       - pyenv
-      - thefuck
       - tlrc
       - zoxide
       - zsh
@@ -29,7 +28,6 @@ packages:
       - delta
       - eza
       - fzf
-      - thefuck
       - tldr
       - zoxide
       - gh

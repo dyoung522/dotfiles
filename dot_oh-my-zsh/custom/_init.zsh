@@ -7,12 +7,13 @@ addToPathFront $HOME/bin
 export GOBIN=$HOME/bin
 
 # rbenv setup
-if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
+which -s rbenv 2>&1 >/dev/null && eval "$(rbenv init -)"
 
 # pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
 addToPath $PYENV_ROOT/bin
-if which pyenv >/dev/null; then eval "$(pyenv init --path)"; fi
+
+which -s pyenv 2>&1 >/dev/null && "$(pyenv init --path)"
 
 # FZF setup
 test -f ~/.fzf.zsh && source ~/.fzf.zsh
@@ -33,6 +34,7 @@ if [ -f /mnt/c/Users/dyoung/AppData/Local/Microsoft/WinGet/Links/op.exe ]; then
 	alias op=/mnt/c/Users/dyoung/AppData/Local/Microsoft/WinGet/Links/op.exe
 fi
 
-# zoxide init
-which -s zoxide && eval "$(zoxide init --cmd cd zsh)"
+# Additional evals
+which -s fzf     2>&1 >/dev/null && source /usr/share/doc/fzf/examples/key-bindings.zsh
+which -s zoxide  2>&1 >/dev/null && eval "$(zoxide init --cmd cd zsh)"
 
