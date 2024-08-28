@@ -13,7 +13,7 @@ which -s rbenv 2>&1 >/dev/null && eval "$(rbenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 addToPath $PYENV_ROOT/bin
 
-which -s pyenv 2>&1 >/dev/null && "$(pyenv init --path)"
+# which -s pyenv 2>&1 >/dev/null && "$(pyenv init --path)"
 
 # FZF setup
 test -f ~/.fzf.zsh && source ~/.fzf.zsh
@@ -35,6 +35,6 @@ if [ -f /mnt/c/Users/dyoung/AppData/Local/Microsoft/WinGet/Links/op.exe ]; then
 fi
 
 # Additional evals
-which -s fzf     2>&1 >/dev/null && source /usr/share/doc/fzf/examples/key-bindings.zsh
+which -s fzf     2>&1 >/dev/null && eval "$(fzf --zsh)"
 which -s zoxide  2>&1 >/dev/null && eval "$(zoxide init --cmd cd zsh)"
 

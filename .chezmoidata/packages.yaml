@@ -9,6 +9,7 @@ packages:
       - gh
       - git
       - gpg
+      - neovim
       - pyenv
       - tlrc
       - zoxide
