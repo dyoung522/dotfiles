@@ -28,10 +28,9 @@ packages:
       - bat
       - delta
       - eza
-      - fd
       - fzf
       - thefuck
-      - tlrc
+      - tldr
       - zoxide
       - gh
       - nala
