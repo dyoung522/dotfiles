@@ -18,6 +18,6 @@ alias path='echo $PATH | tr -s ":" "\n"'
 # custom aliases
 alias gcssh-pd='gcloud compute ssh --zone "us-central1-a" "dyoung522@project-daedalus"  --project "projectdaedalus-fb09f"'
 
-alias cat=bat
-alias ls=eza
+alias cat=batcat
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
