@@ -35,6 +35,14 @@ if [ -f /mnt/c/Users/dyoung/AppData/Local/Microsoft/WinGet/Links/op.exe ]; then
 fi
 
 # Additional evals
-which -s fzf     2>&1 >/dev/null && eval "$(fzf --zsh)"
+# fzf only supprts the `--zsh` flags in versions >= 0.48
+if which -s fzf 2>&1 >/dev/null; then
+  if [ $(fzf --version | cut -d' ' -f1 | cut -d'.' -f2) -gt 48 ]; then
+    eval "$(fzf --zsh)"
+  else
+    test -f /usr/share/doc/fzf/examples/key-bindings.zsh && source /usr/share/doc/fzf/examples/key-bindings.zsh
+  fi
+fi
+
 which -s zoxide  2>&1 >/dev/null && eval "$(zoxide init --cmd cd zsh)"
 
