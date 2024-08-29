@@ -2,6 +2,7 @@ packages:
   darwin:
     brews:
       - bat
+      - btop
       - delta
       - eza
       - fd
@@ -11,6 +12,7 @@ packages:
       - gpg
       - neovim
       - pyenv
+      - rbenv
       - tlrc
       - zoxide
       - zsh
@@ -22,7 +24,8 @@ packages:
       - zsh-git-prompt
     casks:
       - 1password-cli
-      - docker
+      - font-jetbrains-mono-nerd-font
+      - wezterm
   linux:
     apps:
       - bat

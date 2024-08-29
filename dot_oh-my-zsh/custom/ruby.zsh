@@ -1,0 +1,2 @@
+evalIfWhich "rbenv", "rbenv init -"
+
