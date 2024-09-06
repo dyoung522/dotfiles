@@ -1,1 +1,0 @@
-export GOBIN=$HOME/bin
