@@ -3,7 +3,7 @@ PATH=$PATH:/usr/local/go/bin
 {{ end }}
 export GOBIN=$HOME/bin
 
-{{ if eq .chezmoi.os "linux,darwin" }}
+{{ if ne .chezmoi.os "windows" }}
 go-update() {
 	version=$(go version 2>/dev/null || echo "none")
 	release=$(wget -qO- "https://golang.org/VERSION?m=text" | awk '/^go/{print $0}')
