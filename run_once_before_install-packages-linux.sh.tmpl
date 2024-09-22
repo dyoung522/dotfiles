@@ -1,7 +1,7 @@
 {{ if eq .chezmoi.os "linux" -}}
 	#!/bin/bash
 	{{ if eq .chezmoi.osRelease.id "ubuntu" -}}
-		sudo apt-get install -y <<-EOF
+		sudo apt install -y <<-EOF
 			{{ range .packages.linux.apps -}}
 				{{ quote }}
 			{{ end -}}
