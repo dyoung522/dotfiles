@@ -3,3 +3,48 @@ PATH=$PATH:/usr/local/go/bin
 {{ end }}
 export GOBIN=$HOME/bin
 
+{{ if eq .chezmoi.os "linux,darwin" }}
+go-update() {
+	version=$(go version 2>/dev/null || echo "none")
+	release=$(wget -qO- "https://golang.org/VERSION?m=text" | awk '/^go/{print $0}')
+	goroot=${$(go env GOROOT):=/usr/local/go}
+	goarch=${$(go env GOHOSTARCH):=amd64}
+	goos=${$(go env GOHOSTOS):=linux}
+
+	if [[ ! -d "$goroot" ]]; then
+		echo "Unable to determine the GOROOT directory"
+		return 1
+	fi
+
+	if [[ $version == *"$release"* ]]; then
+	    echo "The local Go version ${release} is up-to-date."
+	    return 0
+	else
+	    echo "The local Go version is ${version}. A new release ${release} is available."
+	fi
+
+	release_file="${release}.${goos}-${goarch}.tar.gz"
+
+	tmp=$(mktemp -d)
+	cd $tmp || return 1
+
+	echo "Downloading https://go.dev/dl/$release_file ..."
+	curl -OL https://go.dev/dl/$release_file || return 1
+
+	sudo rm -rf "${goroot}"
+	sudo tar -C ${goroot%/go} -xzf $release_file
+
+	rm -rf $tmp
+
+	cd ~
+
+	version=$(go version)
+	if [[ $version == *"$release"* ]]; then
+	    echo "Now, local Go version is $version"
+	else
+	    echo "Failed to update Go. Current version is still $version."
+	    return 1
+	fi
+}
+{{ end }}
+
