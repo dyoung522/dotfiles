@@ -13,6 +13,7 @@ go-update() {
 
 	if [[ ! -d "$goroot" ]]; then
 		echo "Unable to determine the GOROOT directory"
+		echo "Perhaps golang has not yet been installed on this system?"
 		return 1
 	fi
 
