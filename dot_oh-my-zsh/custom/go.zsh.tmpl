@@ -1,8 +1,8 @@
 {{ if eq .chezmoi.os "linux" }}
-AddToPath /usr/local/go/bin
+addToPath /usr/local/go/bin
 {{ end }}
 export GOBIN=$HOME/bin
-AddToPath ~/go/bin
+addToPath ~/go/bin
 {{ if ne .chezmoi.os "windows" }}
 go-update() {
 	version=$(go version 2>/dev/null || echo "none")
