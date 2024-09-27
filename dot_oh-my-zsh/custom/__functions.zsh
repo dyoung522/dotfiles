@@ -20,6 +20,8 @@ function sourceIfExist() {
 }
 
 function evalIfWhich() {
-  which -s "$1" >/dev/null 2>&1 && eval "$(${2})"
+  prog=$1
+  shift
+  which -s "${prog}" >/dev/null 2>&1 && eval "$(${@})"
 }
 

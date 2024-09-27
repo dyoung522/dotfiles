@@ -30,7 +30,7 @@ packages:
     apps:
       - bat
       - delta
-      - eza
+      - lsd
       - fzf
       - tldr
       - zoxide
