@@ -4,6 +4,8 @@ alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
+alias cat=bat
+alias ls=lsd
 
 # Bundler
 alias b="bundle"
@@ -18,11 +20,9 @@ alias path='echo $PATH | tr -s ":" "\n"'
 # custom aliases
 alias gcssh-pd='gcloud compute ssh --zone "us-central1-a" "dyoung522@project-daedalus"  --project "projectdaedalus-fb09f"'
 
-{{ if eq .chezmoi.os "linux" -}}
+{{ if eq .chezmoi.os "linux" }}
+{{ if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+# Override cat alias under WSL2
 alias cat=batcat
-{{ else -}}
-alias cat=bat
 {{ end -}}
-
-alias ls="eza --color=always --git --icons=auto --no-permissions --octal-permissions"
-
+{{ end -}}
