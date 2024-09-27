@@ -30,11 +30,16 @@ packages:
     apps:
       - bat
       - delta
-      - lsd
       - fzf
-      - tldr
-      - zoxide
       - gh
-      - nala
+      - lsd
+      - neovim
+      - tldr
       - xz-utils
+      - zoxide
+  ubuntu:
+    apps:
+      - nala
+  arch:
+    apps:
 
