@@ -15,5 +15,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 test -d "~/.console-ninja" && addToPath ~/.console-ninja/.bin
 
 # Zoxide
-which -s zoxide  2>&1 >/dev/null && eval "$(zoxide init --cmd cd zsh)"
+evalIfWhich "zoxide" zoxide init zsh
 
