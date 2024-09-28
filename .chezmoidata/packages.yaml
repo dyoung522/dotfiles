@@ -29,17 +29,20 @@ packages:
   linux:
     apps:
       - bat
-      - delta
       - fzf
-      - gh
       - lsd
       - neovim
       - tldr
-      - xz-utils
       - zoxide
   ubuntu:
     apps:
+      - delta
+      - gh
       - nala
+      - xz-utils
   arch:
     apps:
+      - github-cli
+      - neofetch
+
 
