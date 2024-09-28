@@ -5,8 +5,8 @@
 		sudo apt install -y {{ range .packages.linux.apps }} {{.}} {{ end }}
 	{{ end -}}
 	{{ if eq .chezmoi.osRelease.id "arch" -}}
-		sudo pacman -S {{ . | quote }} {{ range .packages.arch.apps }} {{.}} {{ end }}
-		sudo pacman -S {{ . | quote }} {{ range .packages.linux.apps }} {{.}} {{ end }}
+		sudo pacman -S --needed {{ . | quote }} {{ range .packages.arch.apps }} {{.}} {{ end }}
+		sudo pacman -S --needed {{ . | quote }} {{ range .packages.linux.apps }} {{.}} {{ end }}
 	{{ end -}}
 {{ end -}}
 
