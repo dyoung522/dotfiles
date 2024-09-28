@@ -4,12 +4,12 @@ packages:
       - bat
       - btop
       - delta
-      - eza
       - fd
       - fzf
       - gh
       - git
       - gpg
+      - lsd
       - neovim
       - pyenv
       - rbenv
