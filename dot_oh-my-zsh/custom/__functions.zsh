@@ -19,9 +19,13 @@ function sourceIfExist() {
   test -f "$1" && source "$1"
 }
 
+function sourceIfWhich {
+  cmd=$1; shift
+  which -s "${cmd}" >/dev/null 2>&1 && source "${@}"
+}
+
 function evalIfWhich() {
-  prog=$1
-  shift
-  which -s "${prog}" >/dev/null 2>&1 && eval "$(${@})"
+  cmd=$1; shift
+  which -s "${cmd}" >/dev/null 2>&1 && eval "$(${@})"
 }
 
