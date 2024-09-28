@@ -66,5 +66,9 @@
 	program = gpg
 [tag]
 	forceSignAnnotated = false
+[credential "https://github.com"]
+	helper = !op plugin run -- gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !op plugin run -- gh auth git-credential
 [include]
 	path = ~/.gitconfig.local
