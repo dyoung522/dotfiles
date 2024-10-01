@@ -6,6 +6,9 @@ addToPathFront /usr/local/sbin
 addToPathFront /usr/local/bin
 addToPathFront $HOME/bin
 
+# Console Ninja
+addToPathFront ~/.console-ninja/.bin:$PATH
+
 # FZF setup
 test -f ~/.fzf.zsh && source ~/.fzf.zsh
 
