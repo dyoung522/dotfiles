@@ -4,6 +4,7 @@ export LANG=en_US.UTF-8
 # If you come from bash you might have to change your $PATH.
 addToPathFront /usr/local/sbin
 addToPathFront /usr/local/bin
+addToPathFront $HOME/.local/bin
 addToPathFront $HOME/bin
 
 # Console Ninja
