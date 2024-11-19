@@ -1,2 +1,2 @@
-evalIfWhich "rbenv", "$(rbenv init - --no-rehash zsh)"
+evalIfWhich "rbenv", "rbenv init - --no-rehash zsh"
 

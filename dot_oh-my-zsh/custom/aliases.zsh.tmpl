@@ -28,5 +28,8 @@ alias gcssh-pd='gcloud compute ssh --zone "us-central1-a" "dyoung522@project-dae
 {{ if (or (.chezmoi.kernel.osrelease | lower | contains "microsoft") (.chezmoi.osRelease.idLike | lower | contains "debian")) }}
 # Override cat alias under Debian / WSL2
 alias cat=batcat
+# Use nala instead of apt-get
+alias apt=nala
+alias apt-get=nala
 {{ end -}}
 {{ end -}}
