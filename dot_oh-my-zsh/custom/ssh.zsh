@@ -1,1 +1,1 @@
-eval "$(ssh-agent)" >/dev/null 2>&1
+evalIfWhich ssh-agent ssh-agent > /dev/null
