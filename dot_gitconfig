@@ -2,7 +2,7 @@
 	defaultBranch = main
 	templatedir = ~/.git_template
 [user]
-	name = Donovan Young
+	name = Donovan C. Young
 	email = dyoung522@gmail.com
 [core]
 	editor = vim
