@@ -72,8 +72,8 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Don't prompt before loading .env files
-ZSH_DOTENV_PROMPT=false
+# Don't prompt to read .env
+export ZSH_DOTENV_PROMPT=false
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
